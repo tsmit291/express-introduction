@@ -35,6 +35,22 @@ Then visit [http://localhost:3000](http://localhost:3000) and you'll see your ex
 
 Notice that you have a LOT of stuff in `app.js` - you'll learn what all those things do soon enough.  For now, just notice that the routes (like the home page), are not defined in `app.js` anymore - they are in separate route files, like `routes/index.js`.  That's OK - you can just make your changes there from now on.
 
+So instead of writing this in `app.js`:
+
+```js
+app.get('/some/path', function (req, res, next) {
+  // your code here...
+})
+```
+
+You'd write this in your `routes/index.js`:
+
+```js
+router.get('/some/path', function (req, res, next) {
+  // your code here...
+})
+```
+
 ## Where's the .gitignore?
 
 Remember how above we said that it does some boilerplate for us?  Well if you want a nice .gitignore file, you'll have to tell it something else.  `cd` up a directory and remove this app - you'll recreate it in a minute:
@@ -78,6 +94,32 @@ nodemon
 
 Now you are ready.
 
+## Sending data to the view
+
+Let's say you have an EJS template named `say_it.ejs` that looks like this:
+
+```html
+<p>
+  <%= message %>
+</p>
+```
+
+That `<%= %>` syntax says "define a placeholder for a value".  That value will be passed down from the routes via the `locals` object, like so:
+
+```js
+router.get('/some-page', function (req, res) {
+  res.render('say_it', {message: "Hello"})
+})
+```
+
+When the user goes to `/some-page`, your express app will generate the following html:
+
+```html
+<p>
+  Hello
+</p>
+```
+
 ## Write some code!
 
 With what you know from above, and what you know about HTML and CSS, build an app that satisfies the following stories:
@@ -114,11 +156,15 @@ You can grab the images from here:
 * http://media-cache-ak0.pinimg.com/236x/75/a1/d4/75a1d4cba1954c1abee9b4bd85d21de9.jpg
 
 
-### Extra
+### Make the pages more dynamic
 
 ```
 Only use a single route to serve all pages (using if statements in your route)
 ```
+
+Use what you know about path params,`res.render`, the locals object and the template to refactor your code so that the urls (`/verse-1` etc...) stay the same, but all of your views are handled by a single route.
+
+HINT: you can pass multiple properties/values in the `locals` object that you pass to `res.render`.
 
 ## Wireframes
 

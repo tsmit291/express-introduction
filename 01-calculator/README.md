@@ -11,6 +11,14 @@ Using `res.send`, make the following work:
 * When a user visits `/mult/9/3`, it should display 27
 * When a user visits `/div/9/3`, it should display 3
 
+### Debug
+
+As you build your Express apps, you will come across times when you need to inspect your code with `console.log`.
+
+Take a minute to go to your routes, and put a `console.log(req.params)`.  Where does it come out?
+
+If you can't find your output, go back to your Terminal tab where you ran `nodemon` - your output will appear there.
+
 ### Add some logic
 
 Using dynamic route segments (path parameters), refactor your code to use only one route rather than 4 separate routes.
