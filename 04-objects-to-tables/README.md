@@ -1,22 +1,34 @@
-# Object / Express Practice
+# Iterating in views
 
-1. Take the array of objects and display them in a table.
-1. Figure out how to style the table to look like this:
-![](wireframes/table.png)
-1. Make the first name of each person a link to nowhere
+You know how to write `for` loops in JavaScript, and in this exercise you'll figure out how to write `for` loops in a view template.
 
 ## Setup
 
-Make sure you have `nodemon` installed with `npm install -g nodemon`.
+Generate a new Express app, be sure to specify `--git`.
+
+Which view template engine should you use?  Start with `ejs` - the syntax for `ejs` is very similar to JavaScript.
 
 Then run:
 
 ```
 npm install
-npm start
+nodemon
 ```
 
-```
+## Requirements
+
+1. Take the array of objects (provided below) and display them in a table.
+1. Figure out how to style the table to look like this:
+![](wireframes/table.png)
+1. (you can make the first name of each person a link to `#`)
+
+Take the generated HTML and paste it into [http://validator.w3.org/nu/#textarea](http://validator.w3.org/nu/#textarea) to be sure your HTML table has valid markup.
+
+## Data
+
+Drop the following javascript snippet into `lib/data.js`:
+
+```js
 module.exports = {
   all: [
     {

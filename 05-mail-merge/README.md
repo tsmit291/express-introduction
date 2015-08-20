@@ -1,16 +1,19 @@
 # Mail Merge
 
-Install with:
+This project will test everything you know about Express so far, and will require many of the skills you'll need to have in order to write a fullstack application.  It will require you to:
 
-```
-npm install
-```
+- Create an HTML form
+- Style the form to roughly look like the wireframes
+- Handle the form data in a route
+- Write an interesting algorithm in a separate file and connect it with `module.exports`
+- Pass data from the route to the template
+- Iterate over the data passed to the template
 
-Run with:
+## Setup
 
-```
-nodemon
-```
+Generate a new Express app and choose a templating language you have not used yet, like `hbs`, `hogan` or `jade`.
+
+Don't forget to pass the `--git` flag!  Then install your dependencies (`npm install`) and run the app.
 
 ## Organization
 
@@ -22,7 +25,7 @@ This project will have both _server-side_ and _client-side_ javascript.  It can 
 
 ![](wireframes/in-browser-mail-merge.png)
 
-## Required Stories
+## Stories
 
 **Users should see a properly formatted form**
 

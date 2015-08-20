@@ -77,33 +77,26 @@ When a user fills in the `emotion` field with the word "Happy", and the `level` 
 - The the input's `name` attribute becomes the key in `req.body`
 - The the input's value becomes the value in `req.body`
 
-## Instructions
+## Overview
 
-Use `body-parser`, `module.exports` and `require` to accomplish the following:
+Here are the project requirements:
 
-1. Build a form that uses `textarea` and allows users to submit random sentences.
+1. Build a form that uses `textarea` and allows users to submit random sentences
 ![](wireframes/hipstafy.png)
-1. Using `POST` and `body-parser` in your route, capture the user input.
-1. In `public/javascripts/hipstafy.js` write a function that returns a 'hipstafied' response using the user input.
+1. Capture the user input with `req.body` and translate it into a 'hipstafied' response
+1. Render the new hipstafied text to a template
 
-For every word input by the user, the function should:
- - return a random hipster snippet from `models/hipstafy.js`
- - split up the user input and mix each word in between a hipster snippet.
+### Setup the form
 
-EXAMPLE:
+- Write an HTML form with an action/method that matches the path/verb in your `index.js`
+- When the route is called, render a template
 
-If the user input was "Hey what's up??", your app would return this:
+### Write the algorithm
 
-```
-Hey Portland Pug
-what's mustache Intelligentsia
-up?? Thundercats mullet
-```
-NOTE: The user input was 3 words, so the function returned 3 hipster snippets mixed in with the 3 words the user input.
+Add a file in `lib/snippets.js` with the following content:
 
-```
+```js
 module.exports = [
-  "Brooklyn fap",
   "Portland pug",
   "90s sustainable quinoa ",
   "Artisan Thundercats drinking Pabst",
@@ -116,7 +109,6 @@ module.exports = [
   "Beards",
   "mixologist",
   "craftsmania",
-  "like a broke ass mothafucka",
   "keytar beard",
   "Thundercats mullet",
   "dayglo milk fat",
@@ -124,21 +116,22 @@ module.exports = [
 ];
 ```
 
+When you receive data from the user (in `req.body`), you should:
+
+- Pick a random hipster snippet from `lib/snippets.js`
+- Split up the user input by spaces
+- Add a hipster snippet after every word
+
+EXAMPLE:
+
+If the user input was "Hey what's up??", your app would return this:
+
 ```
-extends layout
-
-block content
-  h1.title= title
-  h3.subtitle #{subtitle}
-  div.container
-      div.form
-        label(id="sentence") Write a sentence or two, and we'll hipstafy it for you!
-      div.form
-        textarea(id="sentence", rows="4", cols="70", type="text", name="sentence")
-      div.form
-        input(type="submit" value="hipstafy!")
+Hey Portland Pug
+what's mustache Intelligentsia
+up?? Thundercats mullet
 ```
 
-#### DON'T FORGET
+NOTE: The user input was 3 words, so the function returned 3 hipster snippets mixed in with the 3 words the user input.
 
-Use `module.exports` and `require` to access the function in your routes (to pass user input to your function and get the results) and also to use the hipster snippets found in `models/hipstafy.js` in your function.
+Remember that you'll have to use `require` to get access to those hipster snippets from your route :)
