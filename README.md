@@ -2,7 +2,7 @@
 
 ## Set the stage
 
-Skim through this document.  There are 6 sections to this repo, the intro on this page, and 5 sample projects to run through:
+Skim through this document. Crack open each of the listed repos just to get a good feel of what you're getting into. Which are you most excited to tackle?
 
 - [00 - Express Intro](00-express-intro/README.md) - get things installed and started
 - [01 - Calculator](01-calculator/README.md) -
