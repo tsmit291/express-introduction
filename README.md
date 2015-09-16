@@ -13,5 +13,6 @@ Skim through this document. Crack open each of the listed repos just to get a go
 - [06 - Unirest](05-unirest/README.md)
 - [07 - REST API CRUD](07-rest-api-crud/README.md)
 - [08 - Supertest](08-supertest/README.md)
+- [09 - CORS](09-CORS/README.md)
 
 Take your time - read the associated links, dig in where you need to.  It's not a race :)
