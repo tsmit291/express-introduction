@@ -10,7 +10,7 @@ Skim through this document. Crack open each of the listed repos just to get a go
 - [03 - Hipstafy](03-hipstafy/README.md)
 - [04 - Objects to Tables](04-objects-to-tables/README.md)
 - [05 - Mail Merge](05-mail-merge/README.md)
-- [06 - Unirest](05-unirest/README.md)
+- [06 - Unirest](06-unirest/README.md)
 - [07 - REST API CRUD](07-rest-api-crud/README.md)
 - [08 - Supertest](08-supertest/README.md)
 
