@@ -84,7 +84,7 @@ So stop the server and re-start it.  Now go to http://localhost:3000/meaning-of-
 
 ### Let's keep that server running with nodemon!
 
-Stopping and restarting a server is lame.  It makes development slow, and it's a lot of wasted keyboard motion.  Luckkly, there's a tool to help you - it's called `nodemon`, and it will detect changes to your files, and restart your server for you.
+Stopping and restarting a server is lame.  It makes development slow, and it's a lot of wasted keyboard motion.  Luckily, there's a tool to help you - it's called `nodemon`, and it will detect changes to your files, and restart your server for you.
 
 First, install `nodemon` globally like so:
 
