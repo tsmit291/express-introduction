@@ -42,7 +42,7 @@ You know the drill. Get an express app going and deploy it to heroku.
 
 3) deploy to Heroku
 
-If you need a refresher on the steps involved, check out [project setup](/setup.md).
+If you need a refresher on the steps involved, check out [project setup](setup.md).
 
 `Note: Make sure you add your heroku app to a readme.md file so you can find it later.`
 
