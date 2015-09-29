@@ -110,7 +110,7 @@ Alright, where were we? Let's check the notecard. "Configure dotenv and include 
 
 ## Configure API key with dotenv
 
-You may be comfortable doing this on your own, but if not, check out the following resources: https://students.galvanize.com/cohorts/12/daily_plans/2015-07-13
+You may be comfortable doing this on your own, but if not, check out the following resources: https://students.galvanize.com/redirects/learning_experiences/8
 
 ## Log the request
 
