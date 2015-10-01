@@ -21,7 +21,7 @@ Note: What's the differnece between `--save` and `--save-dev`?
 Now install [Mocha](http://mochajs.org/) globally via npm.
 
 
-Watch this video to get a quick overview of supertest and mocha working together. https://www.youtube.com/watch?v=mwtJibxa3Lo
+Watch this video to get a quick overview of supertest and mocha working together. https://www.youtube.com/watch?v=gQD0KiD36h8
 
 This video uses the `should` library for its assertions. We're going to use the built in `assert` module instead, but you're more than welcome to explore using one or the other.
 
