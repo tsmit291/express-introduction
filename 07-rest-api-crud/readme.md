@@ -109,7 +109,7 @@ Let’s make sure that everything is working up to this point. We will start our
 Let’s start the server. From the command line, type:
 
 ```
-$ nodemon server.js
+$ nodemon app.js
 ```
 
 Note: Why doesn't `npm run start` work here? What would you do to make it work?
